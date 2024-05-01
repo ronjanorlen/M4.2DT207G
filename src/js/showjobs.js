@@ -1,6 +1,18 @@
 "use strict";
 
+// Anropa getJobs
 getJobs();
+
+// Hämta logga ut-knappen
+const logoutBtn = document.getElementById("log-out");
+
+// Lägg till händelsehanterare för logga ut-knapp om den finns
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+        localStorage.clear(); // Töm localStorage
+        window.location.href = "/index.html"; // Omdirigera till startsidan
+    });
+}
 
 // Funktion för att hämta data från api och visa jobberfarenheter på sidan, exporteras
 async function getJobs() {

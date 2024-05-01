@@ -26,7 +26,7 @@ export async function loginUser() {
             localStorage.setItem("JWT", data.response.token);
             // Sparar användarnamnet i localStorage
             localStorage.setItem("username", username); 
-            // Redirect användaren till en annan sida efter inloggning
+            // Redirect användaren till showjobs efter inloggning
             window.location.href = "/showjobs.html";
         } else {
             // Inloggningen misslyckades, visa felmeddelande

@@ -11,6 +11,7 @@ const loginBtn = document.getElementById("loginBtn"); // Logga in-knapp
 const loginForm = document.getElementById("loginForm"); // Logga in-formulär
 const userBtn = document.getElementById("submitUser"); // Skapa användare-knapp
 const userForm = document.getElementById("userForm"); // Skapa användare-formulär
+const logoutBtn = document.getElementById("log-out"); // Logga ut-knapp
 
 window.onload = init;
 
@@ -34,6 +35,7 @@ if (loginForm) {
         loginUser(username, password); // Skicka med användarnamn och lösenord till funktionen
     });
 }
+
 // Kontrollera om formuläret för att skapa användare finns
 if (userForm) {
     // Lägg till en händelselyssnare på knappen submit-user
