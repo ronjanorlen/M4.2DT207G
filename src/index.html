@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startsida</title>
+    <!-- Länk till js-fil -->
+    <script src="js/main.js" type="module"></script>
+</head>
+<body>
+    <main>
+   <!-- Formulär för att logga in -->
+   
+    <h1>Logga in</h1>
+    <form id="loginForm" method="POST">
+        
+            <label for="username">Användarnamn</label>
+            <input type="text" id="username" name="username" required placeholder="Ange användarnamn...">
+        
+            <label for="password">Lösenord</label>
+            <input type="password" id="password" name="password" required placeholder="Ange lösenord...">
+       
+        <span id="errorMsg"></span>
+            <button type="submit" id="loginBtn">Logga in</button>
+        <!-- Länk till att skapa nytt konto -->
+        <div id="user">
+            <p>Ny användare?</p>
+            <a href="register.html">Skapa konto</a>
+    </form>
+</div>
+</main>
+
+    <footer>
+        <p>DT207G - Backendbaserad webbutveckling</p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrera användare</title>
+    <!-- Länk till js-fil -->
+    <script src="js/main.js" type="module"></script>
+</head>
+<body>
+    <main>
+  <!-- Formulär för att skapa ny användare -->
+  
+    <h1>Skapa användarkonto</h1>
+    <form id="userForm" method="POST">
+        
+            <label for="newUsername">Användarnamn</label>
+            <input type="text" id="newUsername" name="username" required placeholder="Ange användarnamn...">
+        
+        
+            <label for="newPassword">Lösenord</label>
+            <input type="password" id="newPassword" name="password" required placeholder="Ange lösenord...">
+        
+        <span id="error-message"></span>
+            <button type="submit" id="submitUser">Skapa konto</button>
+        
+        <!-- Länk för att logga in -->
+        <div id="user">
+            <p>Har du redan ett konto?</p>
+            <a href="index.html">Logga in</a>
+        </div>
+    </form>
+
+<!-- Popup som visas när ny användare lagts till -->
+<span class="popup"></span>
+</main>
+
+    <footer>
+        <p>DT207G - Backendbaserad webbutveckling</p>
+    </footer>
+    
+</body>
+</html>
