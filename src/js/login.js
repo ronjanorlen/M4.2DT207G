@@ -30,7 +30,7 @@ export async function loginUser() {
             window.location.href = "/showjobs.html";
         } else {
             // Inloggningen misslyckades, visa felmeddelande
-            console.error("Inloggningen misslyckades.");
+            console.error("Inloggning misslyckades");
             errorMsg.textContent = "Fel användarnamn eller lösenord.";
             errorMsg.style.display = "block";
         }

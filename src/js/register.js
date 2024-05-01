@@ -22,10 +22,10 @@ export async function createUser() {
 
         if (response.ok) {
             // Användaren skapades, visa ett meddelande 
-            console.log("Användaren skapades framgångsrikt.");
+            console.log("Användare skapad");
         } else {
             // Något gick fel vid skapandet av användaren, visa felmeddelande
-            console.error("Något gick fel vid skapandet av användaren.");
+            console.error("Något gick fel vid skapandet av användare");
         }
     } catch (error) {
         console.error("Något gick fel vid anropet till API:et: ", error);

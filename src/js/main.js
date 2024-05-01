@@ -3,7 +3,6 @@
 // Importerar moduler
 import { loginUser } from "./login.js";
 import { createUser } from "./register.js";
-import { getJobs } from "./showjobs.js";
 
 
 
@@ -25,7 +24,7 @@ if (loginForm) {
 
     // Lägg till en händelselyssnare på logga in-knappen
     loginBtn.addEventListener("click", (e) => {
-        e.preventDefault(); // Förhindra formulärets standardbeteende (så att sidan inte laddas om)
+        e.preventDefault(); // Förhindra formulärets standardbeteende 
         
         // Hämta värden från input-fälten
         const username = usernameInput.value;
@@ -39,7 +38,7 @@ if (loginForm) {
 if (userForm) {
     // Lägg till en händelselyssnare på knappen submit-user
     userBtn.addEventListener("click", (e) => {
-        e.preventDefault(); // Förhindra formulärets standardbeteende (så att sidan inte laddas om)
+        e.preventDefault(); // Förhindra formulärets standardbeteende
         
         // Anropa funktionen createUser när knappen klickas på
         createUser();
@@ -54,22 +53,15 @@ function checkLoggedIn() {
     const token = localStorage.getItem("JWT"); // Hämta JWT från localStorage
     const currentPage = window.location.pathname; // Hämta den aktuella sidan
 
-    console.log(currentPage);
-
     // Kontrollera om användaren är inloggad och befinner sig på showjobs.html
     if (token && currentPage.includes("/showjobs")) {
 
-        console.log("Fetching jobs...");
-
-        // Anropa funktionen för att hämta jobberfarenheter
-        getJobs();
-
     } else if (!token && currentPage.includes("/showjobs")) {
         // Visa ett felmeddelande om användaren inte är inloggad
-        alert("Du är inte inloggad. Vänligen logga in för att visa jobberfarenheter.");
+        alert("Du är inte inloggad. Vänligen logga in för att visa arbetserfarenheter.");
         // Omdirigera till startsidan
         window.location.href = "/index.html";
     }
-}
+ }
 
 

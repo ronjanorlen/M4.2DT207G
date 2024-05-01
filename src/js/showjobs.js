@@ -1,9 +1,9 @@
 "use strict";
+
+getJobs();
+
 // Funktion för att hämta data från api och visa jobberfarenheter på sidan, exporteras
-export async function getJobs() {
-
-    console.log("Hämtar jobberfarenheter...");
-
+async function getJobs() {
     const url = "https://moment-4-1-backend.onrender.com/api/workexperiences"; // Lagra url för API
     const token = localStorage.getItem("JWT"); // Hämtar token från localStorage
     
@@ -23,39 +23,29 @@ export async function getJobs() {
             
         } else {
             // Inloggningen misslyckades, visa felmeddelande
-            console.error("Hämtningen av jobberfarenheter misslyckades.");
+            console.error("Hämtning av arbetserfarenheter misslyckades.");
             alert("Kunde inte hämta jobberfarenheter. Vänligen försök igen senare.");
         }
     } catch (error) {
         console.error("Något gick fel vid anropet till API:et: ", error);
-        alert("Något gick fel vid hämtning av jobberfarenheter. Vänligen försök igen senare.");
+        alert("Något gick fel vid hämtning av arbetserfarenheter. Vänligen försök igen senare.");
     }
 }
 // Funktion för att visa jobberfarenheter på sidan
 function displayExperiences(data) {
-
-    console.log("Visar jobberfarenheter på sidan...");
-    console.table(data);
-
- /*   setTimeout(() => {
-        const workContainer = document.getElementById("work-container");
-        console.log("workContainer exists:", workContainer);
-
         // Formatera datum
         function formDate(timestamp) {
             return timestamp.split('T')[0];
         }
+
+        const workContainer = document.getElementById("work-container");
+
         // Kontroll att container finns
         if (workContainer) {
             workContainer.innerHTML = "";
 
-            console.log(workContainer);
-            console.log("Innan loopen, antal erfarenheter:", job.length === 0);
-
             // Loopa igenom och skapa element för varje jobb
             data.forEach(experience => {
-
-                console.log("Hanterar erfarenhet:", experience);
 
                 // Skapar en article för varje jobberfarenhet
                 const articleEl = document.createElement("article");
@@ -76,9 +66,7 @@ function displayExperiences(data) {
                 // Lägger till artikeln i container för att skriva ut till DOM
                 workContainer.appendChild(articleEl);
             });
-        } else {
-            console.error("workContainer not found!");
+        
         }
-    }, 100); // Fördröjningen är inställd på 100 millisekunder
-    */
+    
 }
