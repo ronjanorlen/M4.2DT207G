@@ -5,6 +5,7 @@ export async function createUser() {
     const url = "https://moment-4-1-backend.onrender.com/api/register";
     const username = document.getElementById("newUsername").value;
     const password = document.getElementById("newPassword").value;
+    const successMessage = document.getElementById("successMessage");
 
     const userData = {
         username: username,
@@ -22,7 +23,9 @@ export async function createUser() {
 
         if (response.ok) {
             // Användaren skapades, visa ett meddelande 
-            console.log("Användare skapad");
+            successMessage.innerHTML = "Användare skapad! <br> Gå till <a href='index.html'>startsidan</a> för att logga in";
+            successMessage.classList.add("show");
+
         } else {
             // Något gick fel vid skapandet av användaren, visa felmeddelande
             console.error("Något gick fel vid skapandet av användare");

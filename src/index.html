@@ -6,12 +6,20 @@
     <title>Startsida</title>
     <!-- Länk till js-fil -->
     <script src="js/main.js" type="module"></script>
+    <!--- Länk till css-fil -->
+    <link rel="stylesheet" href="scss/main.scss">
+     <!-- Länk till fontawesome -->
+     <script src="https://kit.fontawesome.com/41ba6d6515.js" crossorigin="anonymous"></script>
+    <!-- Länk till googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
    <!-- Formulär för att logga in -->
    
-    <h1>Logga in</h1>
+    <h1>Logga in <i class="fa-solid fa-folder"></i></h1>
     <form id="loginForm" method="POST">
         
             <label for="username">Användarnamn</label>
@@ -21,17 +29,18 @@
             <input type="password" id="password" name="password" required placeholder="Ange lösenord...">
        
         <span id="errorMsg"></span>
-            <button type="submit" id="loginBtn">Logga in</button>
+            <button type="submit" id="loginBtn">Logga in <i class="fa-solid fa-arrow-right"></i></button>
         <!-- Länk till att skapa nytt konto -->
         <div id="user">
-            <p>Ny användare?</p>
-            <a href="register.html">Skapa konto</a>
+            <p><i class="fa-regular fa-user"></i> Ny användare?</p>
+            <a href="register.html"><i class="fa-solid fa-plus"></i> Skapa konto</a>
     </form>
 </div>
 </main>
 
     <footer>
-        <p>DT207G - Backendbaserad webbutveckling</p>
+        <p>DT207G - Backendbaserad webbutveckling<br>
+        Av: Ronja Norlén</p>
     </footer>
     
 </body>

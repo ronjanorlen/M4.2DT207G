@@ -31,7 +31,7 @@ export async function loginUser() {
         } else {
             // Inloggningen misslyckades, visa felmeddelande
             console.error("Inloggning misslyckades");
-            errorMsg.textContent = "Fel användarnamn eller lösenord.";
+            errorMsg.textContent = "Fel användarnamn eller lösenord";
             errorMsg.style.display = "block";
         }
     } catch (error) {

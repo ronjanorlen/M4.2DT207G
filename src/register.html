@@ -6,6 +6,14 @@
     <title>Registrera användare</title>
     <!-- Länk till js-fil -->
     <script src="js/main.js" type="module"></script>
+    <!--- Länk till css-fil -->
+    <link rel="stylesheet" href="scss/main.scss">
+        <!-- Länk till fontawesome -->
+        <script src="https://kit.fontawesome.com/41ba6d6515.js" crossorigin="anonymous"></script>
+    <!-- Länk till googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -26,18 +34,19 @@
         
         <!-- Länk för att logga in -->
         <div id="user">
-            <p>Har du redan ett konto?</p>
-            <a href="index.html">Logga in</a>
+            <p><i class="fa-solid fa-user"></i> Har du redan ett konto?</p>
+            <a href="index.html">Logga in <i class="fa-solid fa-arrow-right"></i></a>
         </div>
     </form>
 
 <!-- Popup som visas när ny användare lagts till -->
-<span class="popup"></span>
+<span class="popup" id="successMessage"></span>
 </main>
 
-    <footer>
-        <p>DT207G - Backendbaserad webbutveckling</p>
-    </footer>
+<footer>
+    <p>DT207G - Backendbaserad webbutveckling<br>
+    Av: Ronja Norlén</p>
+</footer>
     
 </body>
 </html>
