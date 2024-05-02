@@ -11,24 +11,29 @@ body {
     padding: 0;
     min-height: 100vh;
     background-color: beige;
-    font-family: "Playfair Display", serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    margin: 30px auto;
+    flex-grow: 1;
+    width: 70%;
+    margin: 40px auto;
     border-radius: 8px;
-    background-color: cadetblue;
+    background-color: base.$mainbackground;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#intro {
+    text-align: center;
+    margin-bottom: 5%;
 }
 
 #work-container {
     width: 60%;
     margin: 30px auto;
-    background-color: rgb(247, 245, 242);
+    background-color: base.$cv-background;
 
     p {
         text-align: left;
@@ -48,7 +53,7 @@ article>div {
 /* Footer */
 footer {
     flex-shrink: 0;
-    background-color: cadetblue;
+    background-color: base.$footerbackground;
     font-size: 16px;
     width: 100%;
     height: 100px;

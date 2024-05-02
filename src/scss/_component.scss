@@ -12,11 +12,11 @@
 }
 #loginBtn {
     @include button-base;
-    background-color: #577492;
+    background-color: base.$login-submit;
 }
 
 #loginBtn:hover {
-    background-color: #007bff;
+    background-color: base.$login-submit-hover;
 }
 
 /* Logga ut-knapp */
@@ -24,19 +24,19 @@
     @include button-base;
     width: 15%;
     margin: 20px auto;
-    background-color: #577492;
+    background-color: base.$logout;
 }
 #log-out:hover {
-    background-color: #387bc9;
+    background-color: base.$logout-hover;
 }
 
 /* Skapa konto-knapp */
 #submitUser {
     @include button-base;
-    background-color: #577492;
+    background-color: base.$login-submit;
 }
 #submitUser:hover {
-    background-color: #082a4e;
+    background-color: base.$login-submit-hover;
 }
 // Formulär 
 @mixin form-base {
@@ -74,15 +74,15 @@ input[type="password"] {
     @include form-base;
 }
 
-/* Felmeddelande */
-#errorMsg {
+/* Felmeddelanden */
+#errorMsg, #error-message {
     color: red;
     margin-bottom: 15px;
 }
 
 /* Stil för länk */
 #user a {
-    color: #007bff;
+    color: #0056b3;
     text-decoration: none;
 }
 
