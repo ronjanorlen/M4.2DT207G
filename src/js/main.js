@@ -4,14 +4,12 @@
 import { loginUser } from "./login.js";
 import { createUser } from "./register.js";
 
-
-
 // Hämtar element och lagrar i variabler
 const loginBtn = document.getElementById("loginBtn"); // Logga in-knapp
 const loginForm = document.getElementById("loginForm"); // Logga in-formulär
 const userBtn = document.getElementById("submitUser"); // Skapa användare-knapp
 const userForm = document.getElementById("userForm"); // Skapa användare-formulär
-const logoutBtn = document.getElementById("log-out"); // Logga ut-knapp
+
 
 window.onload = init;
 

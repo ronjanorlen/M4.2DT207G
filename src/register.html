@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,46 +9,49 @@
     <script src="js/main.js" type="module"></script>
     <!--- Länk till css-fil -->
     <link rel="stylesheet" href="scss/main.scss">
-        <!-- Länk till fontawesome -->
-        <script src="https://kit.fontawesome.com/41ba6d6515.js" crossorigin="anonymous"></script>
+    <!-- Länk till fontawesome -->
+    <script src="https://kit.fontawesome.com/41ba6d6515.js" crossorigin="anonymous"></script>
     <!-- Länk till googlefonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <main>
-  
-    <h1>Skapa konto <i class="fa-solid fa-marker"></i></h1>
-    <p id="intro">Fyll i både användarnamn och lösenord för att skapa ett nytt konto.</p>
-    <!-- Formulär för att skapa ny användare -->
-    <form id="userForm" method="POST">
+
+        <h1>Skapa konto <i class="fa-solid fa-marker"></i></h1>
+        <p id="intro">Fyll i både användarnamn och lösenord för att skapa ett nytt konto.</p>
         
+        <!-- Formulär för att skapa ny användare -->
+        <form id="userForm" method="POST">
+
             <label for="newUsername">Användarnamn</label>
             <input type="text" id="newUsername" name="username" required placeholder="Ange användarnamn...">
-        
-        
+
+
             <label for="newPassword">Lösenord</label>
             <input type="password" id="newPassword" name="password" required placeholder="Ange lösenord...">
-        
-        <span id="error-message"></span>
+
+            <span id="error-message"></span>
             <button type="submit" id="submitUser">Skapa konto</button>
-        
-        <!-- Länk för att logga in -->
-        <div id="user">
+
+            <!-- Redan konto? Logga in -->
             <p><i class="fa-solid fa-user"></i> Har du redan ett konto?</p>
             <a href="index.html">Logga in <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-    </form>
 
-<!-- Popup som visas när ny användare lagts till -->
-<span class="popup" id="successMessage"></span>
-</main>
+        </form>
 
-<footer>
-    <p>DT207G - Backendbaserad webbutveckling<br>
-    Av: Ronja Norlén</p>
-</footer>
-    
+        <!-- Popup som visas när ny användare lagts till -->
+        <span class="popup" id="successMessage"></span>
+    </main>
+
+    <footer>
+        <p>DT207G - Backendbaserad webbutveckling<br>
+            Av: Ronja Norlén</p>
+    </footer>
+
 </body>
+
 </html>

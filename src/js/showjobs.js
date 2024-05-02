@@ -59,7 +59,7 @@ function displayExperiences(data) {
             // Loopa igenom och skapa element för varje jobb
             data.forEach(experience => {
 
-                // Skapar en article för varje jobberfarenhet
+                // Skapa en article för varje jobberfarenhet
                 const articleEl = document.createElement("article");
                 // Skapa id för varje artikel
                 let articleID = `${experience._id}`;
