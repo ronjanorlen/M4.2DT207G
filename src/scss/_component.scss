@@ -3,7 +3,7 @@
 // Knappar
 /* Logga in-knapp */
 @mixin button-base {
-    width: 100%;
+    width: 260px;
     padding: 10px;
     border: none;
     border-radius: 3px;
@@ -22,14 +22,12 @@
 /* Logga ut-knapp */
 #log-out {
     @include button-base;
-    width: 15%;
     margin: 20px auto;
     background-color: base.$logout;
 }
 #log-out:hover {
     background-color: base.$logout-hover;
 }
-
 /* Skapa konto-knapp */
 #submitUser {
     @include button-base;
@@ -38,6 +36,7 @@
 #submitUser:hover {
     background-color: base.$login-submit-hover;
 }
+
 // Formulär 
 @mixin form-base {
     width: 300px;
@@ -51,14 +50,12 @@
 #loginForm {
     @include form-base;
 }
-
 /* Labels*/
 label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
-
 /* Input-fält */
 input[type="text"],
 input[type="password"] {
@@ -68,7 +65,6 @@ input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-
 /* Skapa användare-formulär */
 #userForm {
     @include form-base;
@@ -107,4 +103,10 @@ input[type="password"] {
 
 .popup.show {
     display: block; // Visa när användare är skapad
+}
+.popup a {
+    color: #fff;
+}
+.popup a:hover {
+    color:#0056b3;
 }
