@@ -110,3 +110,16 @@ input[type="password"] {
 .popup a:hover {
     color:#0056b3;
 }
+// Laddningsikon när användare loggas in
+#loading-icon i {
+ font-size: 30px;
+ margin-left: 100px;
+ margin-bottom: 10px;
+ animation-name: spinner;
+ animation-timing-function: ease;
+ animation-duration: 3s;
+ animation-iteration-count: infinite;
+}
+#loading-icon {
+    display: none;
+}

@@ -12,6 +12,9 @@ export async function loginUser() {
     };
 
     try {
+        // Visa laddningsikon
+        startSpinner();
+
         const response = await fetch(url, {
             method: "POST",
             headers: {
@@ -28,6 +31,9 @@ export async function loginUser() {
             localStorage.setItem("username", username); 
             // Redirect användaren till showjobs efter inloggning
             window.location.href = "/showjobs.html";
+            // Dölj laddningsikon
+            hideSpinner();
+
         } else {
             // Inloggningen misslyckades, visa felmeddelande
             console.error("Inloggning misslyckades");
@@ -36,5 +42,20 @@ export async function loginUser() {
         }
     } catch (error) {
         console.error("Något gick fel vid anropet till API:et: ", error);
+    }
+}
+
+/* Visa laddningsikon medan användaren loggas in */
+function startSpinner() {
+    const loadingIcon = document.getElementById("loading-icon");
+    if (loadingIcon) {
+        loadingIcon.style.display = "block";
+    }
+}
+/* Dölj laddningsikon */
+function hideSpinner() {
+    const loadingIcon = document.getElementById("loading-icon");
+    if(loadingIcon) {
+        loadingIcon.style.display = "none";
     }
 }
