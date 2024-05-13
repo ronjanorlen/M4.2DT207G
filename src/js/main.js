@@ -29,8 +29,7 @@ if (loginForm) {
         const username = usernameInput.value;
         const password = passwordInput.value;
 
-        // Anropa loginUser-funktionen med användarnamn och lösenord
-        loginUser(username, password); // Skicka med användarnamn och lösenord till funktionen
+        loginUser(username, password); // Skicka med användarnamn och lösenord till ny funktion
     });
 }
 
