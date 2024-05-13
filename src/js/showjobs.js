@@ -1,5 +1,10 @@
 "use strict";
 
+// Importera modul
+import { checkLoggedIn } from "./main"; 
+
+// Anropa checkLoggedIn
+checkLoggedIn();
 // Anropa getJobs
 getJobs();
 
@@ -37,10 +42,10 @@ async function getJobs() {
             // Inloggningen misslyckades, visa felmeddelande
             alert("Du har inte loggat in eller så har din session gått ut, vänligen logga in på nytt");
             window.location.href = "/index.html"; // Skicka tillbaks till startsidan
+            return;
         }
     } catch (error) {
         console.error("Något gick fel vid anropet till API:et: ", error);
-        alert("Något gick fel vid hämtning av arbetserfarenheter. Vänligen försök igen senare.");
     }
 }
 // Funktion för att visa jobberfarenheter på sidan

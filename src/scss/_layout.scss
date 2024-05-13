@@ -37,19 +37,24 @@ h1 {
 }
 
 #work-container {
-    width: 60%;
+    width: 100%;
     margin: 30px auto;
     background-color: base.$cv-background;
     border: 2px solid;
 
-    p {
-        text-align: left;
-    }
-
     h3, h4, p {
         margin: 10px 10px;
+        text-align: left;
     }
 }
+
+#protected-route {
+    display: none;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 
 article>div {
     border-bottom: 1px solid #000;
@@ -84,6 +89,9 @@ footer p {
     h1 {
         text-align: center;
     }
+    #protected-route {
+        width: 95%;
+    }
     #work-container {
         width: 90%;
     }
@@ -95,6 +103,9 @@ footer p {
     }
     h1 {
         text-align: center;
+    }
+    #protected-route {
+        width: 95%;
     }
     #work-container {
         width: 80%;

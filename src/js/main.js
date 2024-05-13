@@ -44,17 +44,19 @@ if (userForm) {
         createUser();
     });
 }
- // Kolla om användaren är inloggad och befinner sig på showjobs.html
- checkLoggedIn();
+ // Anropa funktion för att kontrollera om besökare är inloggad
+     checkLoggedIn();
 }
 
-// Funktion för att kontrollera inloggning och omdirigera användaren vid behov
-function checkLoggedIn() {
+// Funktion för att kontrollera inloggning och omdirigera besökaren vid behov
+export function checkLoggedIn() {
     const token = localStorage.getItem("JWT"); // Hämta JWT från localStorage
     const currentPage = window.location.pathname; // Hämta den aktuella sidan
 
-    // Kontrollera om användaren är inloggad och befinner sig på showjobs.html
+    // Kontrollera om besökare är inloggad och befinner sig på showjobs.html
     if (token && currentPage.includes("/showjobs")) {
+        // Visa skyddat innehåll
+       document.getElementById("protected-route").style.display = "block";
 
     } else if (!token && currentPage.includes("/showjobs")) {
         // Visa ett felmeddelande om användaren inte är inloggad
@@ -62,6 +64,6 @@ function checkLoggedIn() {
         // Omdirigera till startsidan
         window.location.href = "/index.html";
     }
- }
+}
 
 
